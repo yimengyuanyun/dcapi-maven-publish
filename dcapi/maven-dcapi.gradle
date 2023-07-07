@@ -1,0 +1,19 @@
+apply plugin: "maven-publish"
+configurations.maybeCreate("default")
+def publishArtifact = artifacts.add("default", file('libs/dcapi.aar' ))
+
+publishing {
+    repositories {
+        maven {
+            url  "/Users/wangqin/work/git/maven"
+        }
+    }
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.dcapi'
+            artifactId = 'dcapi_lib'
+            version = '0.0.1'
+            artifact publishArtifact
+        }
+    }
+}
