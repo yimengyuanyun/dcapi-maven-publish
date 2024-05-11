@@ -1,4 +1,4 @@
-a`pply plugin: "maven-publish"
+apply plugin: "maven-publish"
 configurations.maybeCreate("default")
 def publishArtifact = artifacts.add("default", file('libs/dcapi.aar' ))
 
@@ -8,7 +8,7 @@ publishing {
             url  "/Users/wangqin/work/DC/maven"
         }
     }
-    psaublications {
+    publications {
         maven(MavenPublication) {
             groupId = 'com.dcapi'
             artifactId = 'dcapi_lib'
