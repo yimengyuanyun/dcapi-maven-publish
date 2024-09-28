@@ -12,7 +12,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.dcapi'
             artifactId = 'dcapi_lib'
-            version = '0.10.4'
+            version = '0.10.5'
             artifact publishArtifact
         }
     }
